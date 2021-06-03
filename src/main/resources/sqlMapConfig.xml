@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+<!--  配置properties文件-->
+<!--  <properties resource="classpath:jdbc.properties"/>-->
+  <settings>
+    <setting name="logImpl" value="SLF4J"/>
+  </settings>
+
+<!--  配置数据源环境-->
+  <environments default="mysql">
+    <environment id="mysql">
+      <transactionManager type="JDBC"></transactionManager>
+      <dataSource type="POOLED">
+        <property name="driver" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/reserve"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root"/>
+        
+      </dataSource>
+    </environment>
+  </environments>
+
+<!--  加载映射文件-->
+<!--  <mappers>-->
+<!--    <package name="com.xixiyoyo.dao"/>-->
+<!--  </mappers>-->
+
+</configuration>
